@@ -22,5 +22,7 @@ form.addEventListener("submit", async (event) => {
 
     const transcription = await server.get("/summary/" + videoID)
 
-    content.textContent = transcription.data.result
+    content.textContent = "realizando o resumo"
+
+    const summary = await server.post("/summary")
 })
